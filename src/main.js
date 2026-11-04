@@ -12,7 +12,6 @@ import ReplaceText from "./scripts/ReplaceText";
 class Game {
   constructor() {
     this.dom = {
-      main: document.querySelector(".main-content"),
       inputsList: document.querySelector(".characters-list"),
       charactersArr: document.querySelectorAll(".character"),
       validate: document.querySelector(".validate-code"),
@@ -28,31 +27,30 @@ class Game {
   }
 
   bindChallenges() {
-    this.backgroundChar = new BackgroundChar();
-    this.faviconChar = new FaviconChar();
-    this.nameAttribute = new NameAttribute();
-    this.focusItem = new FocusItem("#focus");
-    this.logoOffsetLetter = new LogoOffsetLetter();
-    this.multipleOccurences = new MultipleOccurences();
-    this.listItemFirst = new ListItemFirst();
-    this.deletedNode = new DeletedNode(".main-footer", ".note");
-    this.replaceText = new ReplaceText(".warning", [
-      "Sésame, ouvre-toi!",
-      '"Sésame, ouvre-toi!"',
-    ]);
+    this.challenges = {
+      backgroundChar: new BackgroundChar(),
+      faviconChar: new FaviconChar(),
+      nameAttribute: new NameAttribute(),
+      focusItem: new FocusItem("#focus"),
+      logoOffsetLetter: new LogoOffsetLetter(),
+      multipleOccurences: new MultipleOccurences(),
+      listItemFirst: new ListItemFirst(),
+      deletedNode: new DeletedNode(".main-footer", ".note"),
+      replaceText: new ReplaceText(".warning", [
+        "Sésame, ouvre-toi!",
+        '"Sésame, ouvre-toi!"',
+      ]),
+    };
   }
 
   bindEvents() {
-    this.dom.validate.addEventListener("click", () => this.validate());
+    this.dom.validate?.addEventListener("click", () => this.validate());
   }
 
   getEnteredCombination() {
-    let combination = "";
-    this.dom.charactersArr.forEach((character) => {
-      combination += character.value;
-    });
-
-    return combination;
+    return Array.from(this.dom.charactersArr)
+      .map((character) => character.value)
+      .join("");
   }
 
   validate() {
@@ -60,20 +58,28 @@ class Game {
 
     if (enteredCombination === this.combination) {
       this.success();
-    } else {
-      this.fail();
+      return;
     }
+
+    this.fail();
   }
 
   fail() {
     document.body.classList.add("has-failed");
-    this.dom.inputsList.addEventListener("animationend", () =>
-      document.body.classList.remove("has-failed"),
+    this.dom.inputsList.addEventListener(
+      "animationend",
+      () => document.body.classList.remove("has-failed"),
+      { once: true },
     );
   }
 
   success() {
     document.body.classList.add("has-succeeded");
+
+    if (document.querySelector(".ending")) {
+      return;
+    }
+
     document.body.insertAdjacentHTML(
       "beforeend",
       '<video src="https://i.giphy.com/media/xncwX5CAXArucuH85E/giphy.mp4" autoplay loop muted class="ending">',
@@ -81,17 +87,19 @@ class Game {
   }
 
   getGeneratedCode() {
-    const no1 = this.backgroundChar.char;
-    const no2 = this.faviconChar.char;
-    const no3 = this.nameAttribute.char;
-    const no4 = this.focusItem.char;
-    const no5 = this.logoOffsetLetter.char;
-    const no6 = this.multipleOccurences.char;
-    const no7 = this.listItemFirst.char;
-    const no8 = this.deletedNode.char;
-    const no9 = this.replaceText.char;
+    const {
+      backgroundChar,
+      faviconChar,
+      nameAttribute,
+      focusItem,
+      logoOffsetLetter,
+      multipleOccurences,
+      listItemFirst,
+      deletedNode,
+      replaceText,
+    } = this.challenges;
 
-    this.combination = `${no1}${no2}${no3}${no4}${no5}${no6}${no7}${no8}${no9}`;
+    this.combination = `${backgroundChar.char}${faviconChar.char}${nameAttribute.char}${focusItem.char}${logoOffsetLetter.char}${multipleOccurences.char}${listItemFirst.char}${deletedNode.char}${replaceText.char}`;
   }
 }
 

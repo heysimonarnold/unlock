@@ -1,16 +1,40 @@
-@use 'placeholders';
-
 #focus::after {
-  @extend %bullet;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
   margin-left: 0.25em;
 }
 
-.here-comes-the-sun #focus:focus::after { content: 'X'; }
-.come-together #focus:focus::after { content: 'W'; }
-.strawberry-field-forever #focus:focus::after { content: 'Z'; }
-.hey-jude #focus:focus::after { content: 'R'; }
-.i-am-the-walrus #focus:focus::after { content: 'H'; }
-.lucy-in-the-sky-with-diamonds #focus:focus::after { content: 'M'; }
-.accross-the-universe #focus:focus::after { content: 'N'; }
-.helter-skeleter #focus:focus::after { content: 'V'; }
-.day-tripper #focus:focus::after { content: 'S'; }
+.here-comes-the-sun #focus:focus::after {
+  content: "X";
+}
+.come-together #focus:focus::after {
+  content: "W";
+}
+.strawberry-field-forever #focus:focus::after {
+  content: "Z";
+}
+.hey-jude #focus:focus::after {
+  content: "R";
+}
+.i-am-the-walrus #focus:focus::after {
+  content: "H";
+}
+.lucy-in-the-sky-with-diamonds #focus:focus::after {
+  content: "M";
+}
+.accross-the-universe #focus:focus::after {
+  content: "N";
+}
+.helter-skeleter #focus:focus::after {
+  content: "V";
+}
+.day-tripper #focus:focus::after {
+  content: "S";
+}

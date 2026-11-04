@@ -1,20 +1,46 @@
-@use 'placeholders';
-
 #gottaBeFirst {
-  &.bulbasaur:first-child::before { content: '0' }
-  &.ivisaur:first-child::before { content: '1' }
-  &.venusaur:first-child::before { content: '2' }
-  &.charmander:first-child::before { content: '3' }
-  &.charmaleon:first-child::before { content: '4' }
-  &.charizard:first-child::before { content: '5' }
-  &.squirtle:first-child::before { content: '6' }
-  &.wartotle:first-child::before { content: '7' }
-  &.blastoise:first-child::before { content: '8' }
-  &.caterpie:first-child::before { content: '9' }
+  &.bulbasaur:first-child::before {
+    content: "0";
+  }
+  &.ivisaur:first-child::before {
+    content: "1";
+  }
+  &.venusaur:first-child::before {
+    content: "2";
+  }
+  &.charmander:first-child::before {
+    content: "3";
+  }
+  &.charmaleon:first-child::before {
+    content: "4";
+  }
+  &.charizard:first-child::before {
+    content: "5";
+  }
+  &.squirtle:first-child::before {
+    content: "6";
+  }
+  &.wartotle:first-child::before {
+    content: "7";
+  }
+  &.blastoise:first-child::before {
+    content: "8";
+  }
+  &.caterpie:first-child::before {
+    content: "9";
+  }
 
   &:first-child {
     &::before {
-      @extend %bullet;
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
       margin-right: 0.25em;
     }
   }
