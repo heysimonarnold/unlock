@@ -1,11 +1,19 @@
 export default class FaviconChar {
   constructor() {
     this.dom = {
-      placeholder: document.querySelector('.penny-lane')
-    }
+      placeholder: document.querySelector(".penny-lane"),
+    };
 
-    this.placeholderArr = ['img/a.svg', 'img/b.svg', 'img/c.svg', 'img/d.svg', 'img/e.svg', 'img/f.svg','img/g.svg'];
-    this.charArr = ['@', '#', '!', '?', '$', '%', '&'];
+    this.placeholderArr = [
+      "/unlock/img/a.svg",
+      "/unlock/img/b.svg",
+      "/unlock/img/c.svg",
+      "/unlock/img/d.svg",
+      "/unlock/img/e.svg",
+      "/unlock/img/f.svg",
+      "/unlock/img/g.svg",
+    ];
+    this.charArr = ["@", "#", "!", "?", "$", "%", "&"];
 
     this.init();
   }

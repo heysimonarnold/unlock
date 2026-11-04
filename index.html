@@ -1,19 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:url" content="https://unlock.smnarnold.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Unlock">
-    <meta property="og:description" content="Apprendre à utiliser efficacement l'outil d'inspecteur de son navigateur en jouant à un jeu Unlock!">
-    <meta property="og:image" content="https://unlock.smnarnold.com/img/og-image.jpg">
+    <meta property="og:url" content="https://unlock.smnarnold.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Unlock" />
+    <meta
+      property="og:description"
+      content="Apprendre à utiliser efficacement l'outil d'inspecteur de son navigateur en jouant à un jeu Unlock!"
+    />
+    <meta
+      property="og:image"
+      content="https://unlock.smnarnold.com/img/og-image.jpg"
+    />
     <title>Unlock</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&Roboto+Slab:wght@350;450&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&Roboto+Slab:wght@350;450&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="page">
@@ -34,71 +49,195 @@
       <main class="main-content">
         <section class="combination">
           <div class="characters-list">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
-            <input type="text" value="" placeholder="X" maxlength="1" class="character">
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="X"
+              maxlength="1"
+              class="character"
+            />
           </div>
-          
-          <em class="warning">⚠️ Tous les caractères doivent-être en majuscules.</em>
+
+          <em class="warning"
+            >⚠️ Tous les caractères doivent-être en majuscules.</em
+          >
 
           <button class="btn-pushable validate-code" role="button">
             <span class="btn-shadow"></span>
             <span class="btn-edge"></span>
-            <span class="btn-front text">
-              Valider
-            </span>
+            <span class="btn-front text"> Valider </span>
           </button>
-          
+
           <div class="separator"></div>
         </section>
 
         <div class="challenges">
           <ol>
             <li>
-              <p>Inspectez la bande verte 🟢 ci-dessus ☝️ et désactivez sa propriété gérant sa couleur d'arrière-plan afin de révéler le premier caractère mystère.</p>
+              <p>
+                Inspectez la bande verte 🟢 ci-dessus ☝️ et désactivez sa
+                propriété gérant sa couleur d'arrière-plan afin de révéler le
+                premier caractère mystère.
+              </p>
             </li>
             <li>
-              <p>Dans le <code>&#x3C;head&#x3E;</code>, trouvez la balise <code>&#x3C;link rel="icon"&#x3E;</code> et remplacez sa valeur de <code>href</code> <em>"img/icon.svg"</em> par <em>"<span class="penny-lane">img/a.svg</span>"</em>.</p>
-              <p>Le 2<sup>e</sup> caractère de la combinaison sera alors affiché dans l'onglet de votre navigateur à la place du symbole de la clé 🔑 affichée initialement.</p>
-              <img src="img/unlock-tab.png" alt="Unlock favicon" width="202" height="44">
+              <p>
+                Dans le <code>&#x3C;head&#x3E;</code>, trouvez la balise
+                <code>&#x3C;link rel="icon"&#x3E;</code> et remplacez sa valeur
+                de <code>href</code> <em>"/unlock/img/icon.svg"</em> par
+                <em>"<span class="penny-lane">/unlock/img/a.svg</span>"</em>.
+              </p>
+              <p>
+                Le 2<sup>e</sup> caractère de la combinaison sera alors affiché
+                dans l'onglet de votre navigateur à la place du symbole de la
+                clé 🔑 affichée initialement.
+              </p>
+              <img
+                src="./img/unlock-tab.png"
+                alt="Unlock favicon"
+                width="202"
+                height="44"
+              />
             </li>
             <li>
-              <p>Inspectez le bouton <em>"Valider"</em> situé sous la combinaison. Remarquez la présence d'un attribut <code>[name]</code> sur celui-ci. Cet attribut contient le 3<sup>e</sup> caractère de la combinaison.</p>
+              <p>
+                Inspectez le bouton <em>"Valider"</em> situé sous la
+                combinaison. Remarquez la présence d'un attribut
+                <code>[name]</code> sur celui-ci. Cet attribut contient le 3<sup
+                  >e</sup
+                >
+                caractère de la combinaison.
+              </p>
             </li>
             <li id="focus">
-              <p>À l'aide de l'inspecteur, activez la pseudo-classe <code>:focus</code> sur le <code>&#x3C;li&#x3E;</code> courant. Le 4<sup>e</sup> caractère de la combinaison devrait alors se révéler à la fin du <code>&#x3C;li&#x3E;</code> en question.</p>
+              <p>
+                À l'aide de l'inspecteur, activez la pseudo-classe
+                <code>:focus</code> sur le <code>&#x3C;li&#x3E;</code> courant.
+                Le 4<sup>e</sup> caractère de la combinaison devrait alors se
+                révéler à la fin du <code>&#x3C;li&#x3E;</code> en question.
+              </p>
             </li>
             <li>
-              <p>Inspectez la lettre dans le titre <em>"Unlock!"</em> décalé. À même l'inspecteur, ajoutez-y les propriétés CSS <code>top</code> et <code>left</code> ainsi que les valeurs adéquates afin qu'elle ne soit plus décalée. Lorsque la position adéquate sera atteinte, le titre s'animera et deviendra jaune 🟡.</p>
-              <p>Une fois cette étape complétée, inspecter la balise <code>&#x3C;head&#x3E;</code>. Vous trouverez à la fin de celle-ci un commentaire HTML contenant le 5<sup>e</sup> caractère de la combinaison.</p>
+              <p>
+                Inspectez la lettre dans le titre <em>"Unlock!"</em> décalé. À
+                même l'inspecteur, ajoutez-y les propriétés CSS
+                <code>top</code> et <code>left</code> ainsi que les valeurs
+                adéquates afin qu'elle ne soit plus décalée. Lorsque la position
+                adéquate sera atteinte, le titre s'animera et deviendra jaune
+                🟡.
+              </p>
+              <p>
+                Une fois cette étape complétée, inspecter la balise
+                <code>&#x3C;head&#x3E;</code>. Vous trouverez à la fin de
+                celle-ci un commentaire HTML contenant le 5<sup>e</sup>
+                caractère de la combinaison.
+              </p>
             </li>
-            <li>Effectuez une recherche dans le DOM afin de déterminer combien de commentaires <code>&#x3C;!-- The Beatles --&#x3E;</code> sont présent dans cette page. Ce nombre correspond au 6<sup>e</sup>caractère de la combinaison.</li>
+            <li>
+              Effectuez une recherche dans le DOM afin de déterminer combien de
+              commentaires <code>&#x3C;!-- The Beatles --&#x3E;</code> sont
+              présent dans cette page. Ce nombre correspond au
+              6<sup>e</sup>caractère de la combinaison.
+            </li>
             <li id="gottaBeFirst">
-              <p>Déplacez dans le DOM ce <code>&#x3C;li&#x3E;</code> afin qu'il soit le premier de cette liste. Le 7<sup>e</sup> caractère de la combinaison s'affichera alors au début de cette phrase.</p>
+              <p>
+                Déplacez dans le DOM ce <code>&#x3C;li&#x3E;</code> afin qu'il
+                soit le premier de cette liste. Le 7<sup>e</sup> caractère de la
+                combinaison s'affichera alors au début de cette phrase.
+              </p>
             </li>
             <li>
-              <p>Effacez le lien vers les notes de cours au bas de cette page, mais attention, vous ne devez effacer que ce lien!</p>
-              <p>Une fois complété, cliquer sur le bouton contenant un extrait sonore afin de savoir le prochain caractère de la combinaison 🎧</p>
+              <p>
+                Effacez le lien vers les notes de cours au bas de cette page,
+                mais attention, vous ne devez effacer que ce lien!
+              </p>
+              <p>
+                Une fois complété, cliquer sur le bouton contenant un extrait
+                sonore afin de savoir le prochain caractère de la combinaison 🎧
+              </p>
             </li>
             <li>
-              <p>Remplacez tout le texte affiché dans l'avertissement en jaune sous la combinaison par le texte suivant: <em>Sésame, ouvre-toi!</em></p>
-              <p>Allez ensuite dans l'onglet <em>"Console"</em> de votre inspecteur. Une lettre bleue 🔵 correspondant au dernier caractère de la combinaison sera alors affichée.</p>
+              <p>
+                Remplacez tout le texte affiché dans l'avertissement en jaune
+                sous la combinaison par le texte suivant:
+                <em>Sésame, ouvre-toi!</em>
+              </p>
+              <p>
+                Allez ensuite dans l'onglet <em>"Console"</em> de votre
+                inspecteur. Une lettre bleue 🔵 correspondant au dernier
+                caractère de la combinaison sera alors affichée.
+              </p>
             </li>
           </ol>
         </div>
       </main>
 
       <footer class="main-footer">
-        <a href="https://smnarnold.com/cours/css/inspecteur" target="_blank" class="note">Revoir les notes de cours concernant l'inspecteur</a>
+        <a
+          href="https://github.com/heysimonarnold/unlock"
+          target="_blank"
+          class="note"
+          >Revoir les notes de cours concernant l'inspecteur</a
+        >
       </footer>
     </div>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

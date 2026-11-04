@@ -1,16 +1,14 @@
 {
   "name": "unlock",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.8.0"
+    "vite": "^7.0.0"
   },
-  "dependencies": {
-    "sass": "^1.49.8"
-  }
+  "dependencies": {}
 }

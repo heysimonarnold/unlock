@@ -2,8 +2,8 @@ export default class DeletedNode {
   constructor(parent, el) {
     this.dom = {
       parent: document.querySelector(parent),
-      el: document.querySelector(`${parent} ${el}`)
-    }
+      el: document.querySelector(`${parent} ${el}`),
+    };
 
     this.observer = new MutationObserver(() => this.validate());
     this.randomchar();
@@ -15,19 +15,19 @@ export default class DeletedNode {
   }
 
   randomchar() {
-    const charArr = ['A', 'E', 'I', 'U'];
+    const charArr = ["A", "E", "I", "U"];
     const index = Math.floor(Math.random() * charArr.length);
     this.char = charArr[index];
-    this.sound = new Audio(`/sounds/${this.char}.mp3`);
+    this.sound = new Audio(`./sounds/${this.char}.mp3`);
   }
 
   bindEvents() {
-    this.observer.observe(this.dom.parent, {childList: true});
+    this.observer.observe(this.dom.parent, { childList: true });
   }
 
   validate() {
     const stillExist = this.dom.parent.contains(this.dom.el);
-    
+
     if (!stillExist) this.success();
   }
 
@@ -46,9 +46,9 @@ export default class DeletedNode {
       </span>
     </button>`;
 
-    this.dom.parent.insertAdjacentHTML('afterbegin', btn);
-    this.dom.player = this.dom.parent.querySelector('.play-tip');
-    this.dom.player.addEventListener('click', () => {
+    this.dom.parent.insertAdjacentHTML("afterbegin", btn);
+    this.dom.player = this.dom.parent.querySelector(".play-tip");
+    this.dom.player.addEventListener("click", () => {
       this.sound.currentTime = 0;
       this.sound.play();
     });

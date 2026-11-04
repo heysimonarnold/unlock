@@ -1,18 +1,16 @@
-@use 'styles/variables';
-@use 'styles/animations';
-@use 'styles/base';
-@use 'styles/button';
+@import "styles/variables";
+@import "styles/animations";
+@import "styles/base";
+@import "styles/button";
 
-@use 'styles/main-content';
-@use 'styles/main-footer';
+@import "styles/main-footer";
 
-@use 'styles/logo';
-@use 'styles/combination';
-@use 'styles/separator';
-@use 'styles/challenges';
-@use 'styles/focus';
-@use 'styles/gotta-be-first';
-
+@import "styles/logo";
+@import "styles/combination";
+@import "styles/separator";
+@import "styles/challenges";
+@import "styles/focus";
+@import "styles/gotta-be-first";
 
 .page {
   font-family: var(--font);
@@ -31,8 +29,8 @@
 
 .note {
   display: block;
-  background-color: #CCE9F2;
-  border: solid 4px #00759A;
+  background-color: #cce9f2;
+  border: solid 4px #00759a;
   padding: 25px;
   margin: 0;
   text-decoration: none;
@@ -40,7 +38,7 @@
   text-align: left;
 
   &:hover {
-    background-color: #B3DEEC;
+    background-color: #b3deec;
   }
 }
 
